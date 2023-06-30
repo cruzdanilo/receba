@@ -1,0 +1,24 @@
+{
+  "workspaces": [
+    "contracts",
+    "circuits",
+    "scripts",
+    "webapp"
+  ],
+  "scripts": {
+    "test": "concurrently 'npm:test:*' --kill-others-on-fail -c auto",
+    "test:contracts": "npm -w contracts test",
+    "test:circuits": "npm -w circuits test",
+    "test:scripts": "npm -w scripts test",
+    "test:webapp": "npm -w webapp test"
+  },
+  "engines": {
+    "foundry": ">=0.2.0",
+    "noir": "0.10.5",
+    "node": ">=20.0.0",
+    "python": "~3.11.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}

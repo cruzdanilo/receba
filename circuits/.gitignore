@@ -1,0 +1,6 @@
+crs/
+proofs/
+target/
+contract/
+Prover.toml
+Verifier.toml

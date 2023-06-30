@@ -1,0 +1,6 @@
+/.next/
+/analyze/
+/test-results/
+/playwright-report/
+/app/contracts.ts
+next-env.d.ts

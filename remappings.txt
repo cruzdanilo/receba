@@ -1,0 +1,7 @@
+@openzeppelin/=node_modules/@openzeppelin/
+@receba/=node_modules/@receba/
+solady/=node_modules/solady/
+
+ds-test/=node_modules/ds-test/src/
+forge-std/=node_modules/forge-std/src/
+poseidon-solidity/=node_modules/poseidon-solidity/

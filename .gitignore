@@ -1,0 +1,19 @@
+.env
+node_modules/
+
+# foundry
+/.artifacts/
+/.cache/
+/docs/
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# misc
+*.log*
+*.tsbuildinfo
+.*-version*
+.DS_Store
+.vscode/
+.env.*
+*.pem

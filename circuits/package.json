@@ -1,0 +1,8 @@
+{
+  "name": "@receba/circuits",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "nargo test",
+    "postinstall": "nargo codegen-verifier"
+  }
+}
