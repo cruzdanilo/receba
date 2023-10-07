@@ -8,6 +8,7 @@
     "test:slither": "slither .."
   },
   "dependencies": {
+    "@receba/circuits": "workspace:*",
     "@openzeppelin/contracts": "^5.0.0",
     "solady": "^0.0.124"
   },
