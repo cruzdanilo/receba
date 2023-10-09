@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0
 use dep::std::hash::poseidon::bn254::hash_2;
 
-fn compute_root<N>(leaf: Field, index: Field, hash_path: [Field; N]) -> Field {
+pub fn compute_root<N>(leaf: Field, index: Field, hash_path: [Field; N]) -> Field {
   let n = hash_path.len();
   let index_bits = index.to_le_bits(n as u32);
   let mut current = leaf;
