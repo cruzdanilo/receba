@@ -1,10 +1,10 @@
 import { rpc } from 'viem/utils';
-import { foundry } from 'viem/chains';
 import { createConfig } from '@wagmi/core';
 import { createPublicClient, createTransport, fallback, RpcRequestError, type TransactionRequest } from 'viem';
+import appChain from '../app/chain';
 
 export const config = createConfig({
-  chains: [foundry],
+  chains: [appChain],
   storage: null,
   connectors: [],
   syncConnectedChain: false,

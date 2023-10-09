@@ -6,12 +6,12 @@
     "test": "concurrently 'npm:test:*' --group -c auto",
     "test:e2e": "playwright test",
     "test:eslint": "eslint --max-warnings 0 .",
-    "e2e:next": "npm run e2e:setup && export NEXT_PUBLIC_FOUNDRY=true && next build --no-lint && next start",
-    "e2e:setup": "npm -w @receba/scripts run webapp:setup",
+    "e2e:next": "npm run e2e:setup && export NETWORK=localhost && next build --no-lint && next start",
+    "e2e:setup": "npm -w @receba/scripts run webapp:setup && NETWORK=localhost wagmi generate",
     "dev": "concurrently 'npm:dev:*' --kill-others -c auto",
     "dev:anvil": "anvil",
-    "dev:next": "npm run e2e:setup && rm -rf .next/cache/fetch-cache && NEXT_PUBLIC_FOUNDRY=true next dev",
-    "postinstall": "concurrently npm:dev:anvil npm:e2e:setup --kill-others --success first --hide 0,1"
+    "dev:next": "npm run e2e:setup && rm -rf .next/cache/fetch-cache && NETWORK=localhost next dev",
+    "postinstall": "wagmi generate"
   },
   "dependencies": {
     "@tanstack/react-query": "rc",
@@ -35,7 +35,7 @@
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.11",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@wagmi/cli": "alpha",
+    "@wagmi/cli": "2.0.0-alpha.6",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.1",
     "daisyui": "^3.9.2",

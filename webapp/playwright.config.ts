@@ -12,7 +12,7 @@ export default defineConfig({
   ],
   webServer: [
     { command: 'npm run dev:anvil', url: 'http://localhost:8545' },
-    { command: 'npm run e2e:next', url: 'http://localhost:3000', env: { NEXT_PUBLIC_E2E: 'true' } },
+    { command: 'npm run e2e:next', url: 'http://localhost:3000', timeout: 666_666 },
   ],
   expect: { timeout: 6_666 },
   timeout: 66_666,
