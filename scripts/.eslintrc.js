@@ -10,6 +10,7 @@ module.exports = {
   parserOptions: { project: require.resolve('./tsconfig.json') },
   rules: {
     'max-len': ['error', { code: 120, ignoreComments: true, ignoreStrings: true, ignoreTemplateLiterals: true }],
+    'no-plusplus': 'off',
     'no-await-in-loop': 'off',
     'no-restricted-syntax': 'off',
   },
