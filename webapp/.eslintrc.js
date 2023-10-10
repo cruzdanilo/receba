@@ -18,6 +18,9 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
   },
-  overrides: [{ files: ['e2e/**/*'], extends: ['plugin:playwright/recommended'] }],
+  overrides: [
+    { files: ['e2e/**/*'], extends: ['plugin:playwright/recommended'] },
+    { files: ['*.config.js'], rules: { '@typescript-eslint/no-var-requires': 'off' } },
+  ],
   ignorePatterns: ['/app/contracts.ts'],
 };
