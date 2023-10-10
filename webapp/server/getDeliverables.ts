@@ -17,5 +17,7 @@ export default cache(async function getDeliverables() {
 });
 
 export async function revalidate() {
-  revalidateTag(`${address}:${getFunctionSelector('totalSupply()')}`);
+  revalidateTag(
+    `{"method":"eth_call","params":[{"data":"${getFunctionSelector('totalSupply()')}","to":"${address}"}]}`,
+  );
 }
