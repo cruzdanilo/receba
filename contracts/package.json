@@ -5,12 +5,12 @@
     "test:fmt": "forge fmt --check",
     "test:solhint": "solhint '{../contracts,.}/**/*.sol'",
     "test:forge": "forge test",
-    "test:slither": "slither .."
+    "test:slither": "cd .. && slither ."
   },
   "dependencies": {
     "@receba/circuits": "workspace:*",
     "@openzeppelin/contracts": "^5.0.0",
-    "solady": "^0.0.124"
+    "solady": "^0.0.127"
   },
   "devDependencies": {
     "concurrently": "^8.2.1",

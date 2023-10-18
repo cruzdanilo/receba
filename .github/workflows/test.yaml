@@ -22,8 +22,6 @@ jobs:
           cache: pip
           cache-dependency-path: contracts/requirements.txt
 
-      - run: nargo backend install acvm-backend-barretenberg https://github.com/noir-lang/barretenberg-js-binary/raw/master/run-bb.tar.gz
-
       - run: bun install
       - run: pip install -r contracts/requirements.txt
       - run: npx playwright install chromium webkit --with-deps
